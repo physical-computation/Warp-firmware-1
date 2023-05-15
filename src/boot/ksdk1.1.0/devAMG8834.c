@@ -77,7 +77,7 @@ initAMG8834(const uint8_t i2cAddress, uint16_t operatingVoltageMillivolts)
 }
 
 WarpStatus
-writeSensorRegisterAMG8834(uint8_t deviceRegister, uint8_t payload, uint16_t menuI2cPullupValue)
+writeSensorRegisterAMG8834(uint8_t deviceRegister, uint8_t payload)
 {
 	uint8_t		payloadByte[1], commandByte[1];
 	i2c_status_t	returnValue;
@@ -127,7 +127,7 @@ writeSensorRegisterAMG8834(uint8_t deviceRegister, uint8_t payload, uint16_t men
 }
 
 WarpStatus
-configureSensorAMG8834(uint8_t payloadConfigReg, uint8_t payloadFrameRateReg, uint16_t menuI2cPullupValue)
+configureSensorAMG8834(uint8_t payloadConfigReg, uint8_t payloadFrameRateReg)
 {
 	WarpStatus	i2cWriteStatus1, i2cWriteStatus2;
 
@@ -135,12 +135,12 @@ configureSensorAMG8834(uint8_t payloadConfigReg, uint8_t payloadFrameRateReg, ui
 	warpScaleSupplyVoltage(deviceAMG8834State.operatingVoltageMillivolts);
 
 	i2cWriteStatus1 = writeSensorRegisterAMG8834(kWarpSensorConfigurationRegisterAMG8834RST /* register address configuration register */,
-							payloadConfigReg,
-							menuI2cPullupValue);
+							payloadConfigReg
+							);
 
 	i2cWriteStatus2 = writeSensorRegisterAMG8834(kWarpSensorConfigurationRegisterAMG8834FPSC /* register address frame rate register */,
-							payloadFrameRateReg,
-							menuI2cPullupValue);
+							payloadFrameRateReg
+							);
 
 	return (i2cWriteStatus1 | i2cWriteStatus2);
 }

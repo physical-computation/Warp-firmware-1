@@ -109,18 +109,18 @@
 	/*
 	 *	Otherwise: Edit these to set which code paths are activated in the firmware compilation
 	 */
-	#define		WARP_BUILD_ENABLE_DEVADXL362		1
-	#define		WARP_BUILD_ENABLE_DEVAMG8834		0
+	#define		WARP_BUILD_ENABLE_DEVADXL362		0
+	#define		WARP_BUILD_ENABLE_DEVAMG8834		1
 	#define		WARP_BUILD_ENABLE_DEVAS7262		0
 	#define		WARP_BUILD_ENABLE_DEVAS7263		0
-	#define		WARP_BUILD_ENABLE_DEVBGX		1
+	#define		WARP_BUILD_ENABLE_DEVBGX		0
 	#define		WARP_BUILD_ENABLE_DEVBME680		0
 	#define		WARP_BUILD_ENABLE_DEVBMX055		0
 	#define		WARP_BUILD_ENABLE_DEVCCS811		0
 	#define		WARP_BUILD_ENABLE_DEVHDC1000		0
 	#define		WARP_BUILD_ENABLE_DEVIS25xP		0
-	#define		WARP_BUILD_ENABLE_DEVISL23415		0
-	#define		WARP_BUILD_ENABLE_DEVAT45DB		1
+	#define		WARP_BUILD_ENABLE_DEVISL23415		1
+	#define		WARP_BUILD_ENABLE_DEVAT45DB		0
 	#define		WARP_BUILD_ENABLE_DEVICE40		0
 	#define		WARP_BUILD_ENABLE_DEVL3GD20H		0
 	#define		WARP_BUILD_ENABLE_DEVLPS25H		0
@@ -144,7 +144,7 @@ typedef enum
 	/*
 	 *	Times
 	 */
-	kWarpDefaultSleeptimeSeconds				= 0,
+	kWarpDefaultSleeptimeSeconds				= 60,
 	kWarpDefaultI2cTimeoutMilliseconds			= 5,
 	kWarpDefaultUartTimeoutMilliseconds			= 1000,
 	kWarpDefaultSpiTimeoutMicroseconds			= 5,
@@ -165,21 +165,21 @@ typedef enum
 	 *	Voltages
 	 */
 	kWarpDefaultSupplyVoltageMillivolts			= 1800,
-	kWarpDefaultSupplyVoltageMillivoltsBGX			= 3300,
-	kWarpDefaultSupplyVoltageMillivoltsBMX055accel		= 1800,
-	kWarpDefaultSupplyVoltageMillivoltsBMX055gyro		= 1800,
-	kWarpDefaultSupplyVoltageMillivoltsBMX055mag		= 1800,
+	kWarpDefaultSupplyVoltageMillivoltsBGX			= 3000,
+	kWarpDefaultSupplyVoltageMillivoltsBMX055accel		= 2600,
+	kWarpDefaultSupplyVoltageMillivoltsBMX055gyro		= 2600,
+	kWarpDefaultSupplyVoltageMillivoltsBMX055mag		= 2600,
 	kWarpDefaultSupplyVoltageMillivoltsMMA8451Q		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsLPS25H		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsHDC1000		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsMAG3110		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsSI7021		= 1800,
-	kWarpDefaultSupplyVoltageMillivoltsL3GD20H		= 1800,
+	kWarpDefaultSupplyVoltageMillivoltsL3GD20H		= 2200,
 	kWarpDefaultSupplyVoltageMillivoltsBME680		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsTCS34725		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsSI4705		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsCCS811		= 1800,
-	kWarpDefaultSupplyVoltageMillivoltsAMG8834		= 1800,
+	kWarpDefaultSupplyVoltageMillivoltsAMG8834		= 2600,
 	kWarpDefaultSupplyVoltageMillivoltsAS7262		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsAS7263		= 1800,
 	kWarpDefaultSupplyVoltageMillivoltsRV8803C7		= 1800,

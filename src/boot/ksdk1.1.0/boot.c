@@ -1653,7 +1653,7 @@ main(void)
 	#endif
 
 	#if (WARP_BUILD_ENABLE_DEVAMG8834)
-		initAMG8834(	0x68	/* i2cAddress */,	kWarpDefaultSupplyVoltageMillivoltsAMG8834	);
+		initAMG8834(	0x69	/* i2cAddress */,	kWarpDefaultSupplyVoltageMillivoltsAMG8834	);
 	#endif
 
 	#if (WARP_BUILD_ENABLE_DEVAS7262)
@@ -3093,7 +3093,7 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
 
 	#if (WARP_BUILD_ENABLE_DEVAMG8834)
 	numberOfConfigErrors += configureSensorAMG8834(	0x3F,/* Initial reset */
-					0x01,/* Frame rate 1 FPS */
+					0x01/* Frame rate 1 FPS */
 					);
 	#endif
 	#if (WARP_BUILD_ENABLE_DEVMMA8451Q)
